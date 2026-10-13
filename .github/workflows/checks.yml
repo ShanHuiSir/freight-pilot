@@ -1,0 +1,52 @@
+name: Verify & build executable
+on:
+  push:
+    branches: [main]
+    tags: ['v*']
+  workflow_dispatch:
+permissions:
+  contents: write
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - run: python -m pip install -r requirements.txt
+      - run: python -m unittest discover -s tests -v
+  build:
+    needs: test
+    strategy:
+      matrix:
+        os: [windows-latest]
+    runs-on: ${{ matrix.os }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - run: python -m pip install -r requirements-desktop.txt
+      - run: python scripts/build.py
+      - name: Smoke test packaged product
+        shell: bash
+        run: |
+          python scripts/smoke_executable.py
+      - uses: actions/upload-artifact@v4
+        with:
+          name: FreightPilot-${{ runner.os }}
+          path: dist/FreightPilot*
+      - name: Attach executable to tagged release
+        if: startsWith(github.ref, 'refs/tags/')
+        shell: bash
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          if [ "$RUNNER_OS" = "Windows" ]; then
+            cp dist/FreightPilot.exe dist/FreightPilot-Windows-x64.exe
+            gh release upload "$GITHUB_REF_NAME" dist/FreightPilot-Windows-x64.exe --clobber
+          else
+            cp dist/FreightPilot dist/FreightPilot-macOS-arm64
+            gh release upload "$GITHUB_REF_NAME" dist/FreightPilot-macOS-arm64 --clobber
+          fi

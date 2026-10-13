@@ -1,0 +1,14 @@
+.env
+.env.*
+!.env.example
+.venv/
+__pycache__/
+*.pyc
+runtime/
+build/
+dist/
+.DS_Store
+*.log
+
+source_materials/
+FreightPilot.spec
