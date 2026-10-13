@@ -17,6 +17,9 @@ $('#load-demo').onclick=()=>{fill({id:'DEMO-001',weight:800,origin:'PORT06',dest
 $('#parse').onclick=()=>busy($('#parse'),async()=>{status('正在解析运输需求；价格将在确认后由核算引擎计算。');const r=await api('/api/parse',{text:$('#request').value});r.order.id=$('#order-id').value;fill(r.order);$('#parse-meta').textContent=`${r.meta.source} · ${r.meta.model||'固定格式'} · ${r.meta.seconds} 秒 · 请核对字段后执行`;status('需求已解析，等待核对。请确认订单字段，再点击“开始比价与优化”。')});
 $('#order-form').onsubmit=e=>{e.preventDefault();busy($('#run'),async()=>{status('正在匹配报价、核算费用与核对时效…');const r=await api('/api/compare',{catalog_id:state.catalog.id,order:readOrder()});renderResult(r);$('#results').scrollIntoView({behavior:'smooth',block:'start'})})};
 $('#eligible-only').onchange=quotes;
+$('#preview').onclick=e=>{e.preventDefault();$('#report-frame').src=$('#preview').href;$('#report-dialog').showModal()};
+$('#report-close').onclick=()=>$('#report-dialog').close();
+$('#report-dialog').onclick=e=>{if(e.target===$('#report-dialog'))$('#report-dialog').close()};
 $('#rate-file').onchange=()=>busy($('#run'),async()=>{const r=await api('/api/rates/upload',await uploadData($('#rate-file').files[0]));catalog(r);state.result=null;$('#results').hidden=true;status(`报价已导入：${r.valid} 条有效报价。请重新执行比价。`)});
 $('#explain').onclick=()=>busy($('#explain'),async()=>{status('正在生成 DeepSeek 采购简报；核算结果已保留。');const r=await api('/api/explain',{result_id:state.result.result_id});$('#ai-text').textContent=r.text+'\n\n'+r.notice+`\n来源：${r.meta.source} / ${r.meta.model} · ${r.meta.seconds} 秒`;status('DeepSeek 采购简报已生成；导出运行快照将包含本次模型结果。')});
 $('#batch-file').onchange=()=>{$('#batch-name').textContent=$('#batch-file').files[0]?.name||'尚未选择文件';$('#batch-results').hidden=true};
