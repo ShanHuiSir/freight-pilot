@@ -1,0 +1,36 @@
+name: Upload reviewed submission
+on:
+  workflow_dispatch:
+  push:
+    branches: [release-upload-recovery]
+permissions:
+  contents: write
+jobs:
+  upload:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Build matching compression runtime
+        run: |
+          curl -fsSL https://github.com/madler/zlib/archive/refs/tags/v1.2.12.tar.gz -o /tmp/zlib.tar.gz
+          tar -xzf /tmp/zlib.tar.gz -C /tmp
+          cd /tmp/zlib-1.2.12
+          ./configure --prefix=/tmp/zip-runtime
+          make -j2
+          make install
+      - name: Download already verified executables
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          mkdir -p /tmp/reviewed-assets
+          gh release download v1.0.0 --repo "$GITHUB_REPOSITORY" --dir /tmp/reviewed-assets --pattern 'FreightPilot-Windows-x64.exe' --pattern 'FreightPilot-macOS-arm64'
+      - name: Reconstruct and verify exact archive
+        env:
+          LD_LIBRARY_PATH: /tmp/zip-runtime/lib
+        run: |
+          python3 -c 'import zlib; assert zlib.ZLIB_RUNTIME_VERSION == "1.2.12"'
+          python3 scripts/assemble_verified_submission.py /tmp/reviewed-assets /tmp/FreightPilot-Submission-v1.0.0.zip
+      - name: Upload exact reviewed archive
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: gh release upload v1.0.0 /tmp/FreightPilot-Submission-v1.0.0.zip --repo "$GITHUB_REPOSITORY"
