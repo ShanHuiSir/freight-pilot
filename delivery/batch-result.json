@@ -1,0 +1,878 @@
+{
+  "results": [
+    {
+      "order": {
+        "id": "DEMO-001",
+        "weight": "800",
+        "origin": "PORT06",
+        "destination": "PORT09",
+        "max_days": 3,
+        "service": "DTD",
+        "mode": "AIR"
+      },
+      "status": "ok",
+      "message": "已推荐满足约束的最低成本方案",
+      "candidates": [
+        {
+          "source_row": 176,
+          "carrier": "V444_5",
+          "service": "DTD",
+          "mode": "AIR",
+          "days": 3,
+          "weight_min": "500",
+          "weight_max": "1999.99",
+          "minimum_cost": "7.4272",
+          "unit_rate": "0.0848",
+          "weight_cost": "67.8400",
+          "raw_cost": "67.8400",
+          "cost": "67.84",
+          "eligible": true,
+          "minimum_applied": false,
+          "formula": "max(7.4272, 800 × 0.0848) = 67.84",
+          "reason": "符合要求",
+          "recommended": true,
+          "pareto": true
+        },
+        {
+          "source_row": 548,
+          "carrier": "V444_1",
+          "service": "DTD",
+          "mode": "AIR",
+          "days": 2,
+          "weight_min": "500",
+          "weight_max": "999.99",
+          "minimum_cost": "59.4272",
+          "unit_rate": "0.086",
+          "weight_cost": "68.800",
+          "raw_cost": "68.800",
+          "cost": "68.80",
+          "eligible": true,
+          "minimum_applied": false,
+          "formula": "max(59.4272, 800 × 0.086) = 68.80",
+          "reason": "符合要求",
+          "recommended": false,
+          "pareto": true
+        },
+        {
+          "source_row": 392,
+          "carrier": "V444_5",
+          "service": "DTD",
+          "mode": "AIR",
+          "days": 2,
+          "weight_min": "500",
+          "weight_max": "1999.99",
+          "minimum_cost": "13.6672",
+          "unit_rate": "0.0868",
+          "weight_cost": "69.4400",
+          "raw_cost": "69.4400",
+          "cost": "69.44",
+          "eligible": true,
+          "minimum_applied": false,
+          "formula": "max(13.6672, 800 × 0.0868) = 69.44",
+          "reason": "符合要求",
+          "recommended": false,
+          "pareto": false
+        },
+        {
+          "source_row": 700,
+          "carrier": "V444_4",
+          "service": "DTD",
+          "mode": "AIR",
+          "days": 2,
+          "weight_min": "75.01",
+          "weight_max": "99999.99",
+          "minimum_cost": "11.2216",
+          "unit_rate": "0.096",
+          "weight_cost": "76.800",
+          "raw_cost": "76.800",
+          "cost": "76.80",
+          "eligible": true,
+          "minimum_applied": false,
+          "formula": "max(11.2216, 800 × 0.096) = 76.80",
+          "reason": "符合要求",
+          "recommended": false,
+          "pareto": false
+        },
+        {
+          "source_row": 965,
+          "carrier": "V444_5",
+          "service": "DTD",
+          "mode": "AIR",
+          "days": 1,
+          "weight_min": "500",
+          "weight_max": "1999.99",
+          "minimum_cost": "25.4672",
+          "unit_rate": "0.2884",
+          "weight_cost": "230.7200",
+          "raw_cost": "230.7200",
+          "cost": "230.72",
+          "eligible": true,
+          "minimum_applied": false,
+          "formula": "max(25.4672, 800 × 0.2884) = 230.72",
+          "reason": "符合要求",
+          "recommended": false,
+          "pareto": true
+        }
+      ],
+      "matched": 5,
+      "eligible": 5,
+      "recommendation": {
+        "source_row": 176,
+        "carrier": "V444_5",
+        "service": "DTD",
+        "mode": "AIR",
+        "days": 3,
+        "weight_min": "500",
+        "weight_max": "1999.99",
+        "minimum_cost": "7.4272",
+        "unit_rate": "0.0848",
+        "weight_cost": "67.8400",
+        "raw_cost": "67.8400",
+        "cost": "67.84",
+        "eligible": true,
+        "minimum_applied": false,
+        "formula": "max(7.4272, 800 × 0.0848) = 67.84",
+        "reason": "符合要求",
+        "recommended": true,
+        "pareto": true
+      },
+      "fastest_baseline": {
+        "source_row": 965,
+        "carrier": "V444_5",
+        "service": "DTD",
+        "mode": "AIR",
+        "days": 1,
+        "weight_min": "500",
+        "weight_max": "1999.99",
+        "minimum_cost": "25.4672",
+        "unit_rate": "0.2884",
+        "weight_cost": "230.7200",
+        "raw_cost": "230.7200",
+        "cost": "230.72",
+        "eligible": true,
+        "minimum_applied": false,
+        "formula": "max(25.4672, 800 × 0.2884) = 230.72",
+        "reason": "符合要求",
+        "recommended": false,
+        "pareto": true
+      },
+      "savings_vs_fastest": "162.88",
+      "savings_percent": 70.6,
+      "exclusions": {
+        "route": 1058,
+        "weight": 471,
+        "service": 3,
+        "mode": 0,
+        "time": 0
+      },
+      "catalog": {
+        "id": "442be43a7393fc67",
+        "name": "FreightRates.csv",
+        "sha256": "442be43a7393fc6793a0d8748ed280a42be2235dc64e2fafd27a9ba5678362f5",
+        "total": 1540,
+        "valid": 1537,
+        "rejected": [],
+        "duplicates": 3,
+        "carriers": 9,
+        "origins": [
+          "PORT02",
+          "PORT03",
+          "PORT04",
+          "PORT05",
+          "PORT06",
+          "PORT07",
+          "PORT08",
+          "PORT09",
+          "PORT10",
+          "PORT11"
+        ],
+        "destinations": [
+          "PORT09"
+        ],
+        "routes": 10
+      },
+      "billing": {
+        "formula": "max(Min_Cost, 货物重量 × Rate)",
+        "weight_interval": "两端包含；重量最多两位小数",
+        "rounding": "Decimal 精确比较，显示金额四舍五入到两位小数",
+        "units": "重量单位与币种须由业务确认；展示为报价单位 / 货币单位",
+        "scope": "每单整体交给一个承运商；不包含燃油、税费、体积重、容量约束与跨单拼单"
+      },
+      "trace": [
+        {
+          "tool": "validate_order",
+          "status": "ok",
+          "detail": "PORT06 → PORT09 · 800 报价单位"
+        },
+        {
+          "tool": "match_rates",
+          "status": "ok",
+          "detail": "有效报价 1537 条，匹配 5 条"
+        },
+        {
+          "tool": "calculate_costs",
+          "status": "ok",
+          "detail": "按最低收费与重量计费较高者核算"
+        },
+        {
+          "tool": "apply_constraints",
+          "status": "ok",
+          "detail": "满足时效 5 条"
+        },
+        {
+          "tool": "recommend_plan",
+          "status": "ok",
+          "detail": "V444_5 · 67.84"
+        }
+      ],
+      "input_row": 2
+    },
+    {
+      "order": {
+        "id": "DEMO-002",
+        "weight": "800",
+        "origin": "PORT06",
+        "destination": "PORT09",
+        "max_days": 1,
+        "service": "DTD",
+        "mode": "AIR"
+      },
+      "status": "ok",
+      "message": "已推荐满足约束的最低成本方案",
+      "candidates": [
+        {
+          "source_row": 176,
+          "carrier": "V444_5",
+          "service": "DTD",
+          "mode": "AIR",
+          "days": 3,
+          "weight_min": "500",
+          "weight_max": "1999.99",
+          "minimum_cost": "7.4272",
+          "unit_rate": "0.0848",
+          "weight_cost": "67.8400",
+          "raw_cost": "67.8400",
+          "cost": "67.84",
+          "eligible": false,
+          "minimum_applied": false,
+          "formula": "max(7.4272, 800 × 0.0848) = 67.84",
+          "reason": "超出 1 天时效",
+          "recommended": false,
+          "pareto": false
+        },
+        {
+          "source_row": 548,
+          "carrier": "V444_1",
+          "service": "DTD",
+          "mode": "AIR",
+          "days": 2,
+          "weight_min": "500",
+          "weight_max": "999.99",
+          "minimum_cost": "59.4272",
+          "unit_rate": "0.086",
+          "weight_cost": "68.800",
+          "raw_cost": "68.800",
+          "cost": "68.80",
+          "eligible": false,
+          "minimum_applied": false,
+          "formula": "max(59.4272, 800 × 0.086) = 68.80",
+          "reason": "超出 1 天时效",
+          "recommended": false,
+          "pareto": false
+        },
+        {
+          "source_row": 392,
+          "carrier": "V444_5",
+          "service": "DTD",
+          "mode": "AIR",
+          "days": 2,
+          "weight_min": "500",
+          "weight_max": "1999.99",
+          "minimum_cost": "13.6672",
+          "unit_rate": "0.0868",
+          "weight_cost": "69.4400",
+          "raw_cost": "69.4400",
+          "cost": "69.44",
+          "eligible": false,
+          "minimum_applied": false,
+          "formula": "max(13.6672, 800 × 0.0868) = 69.44",
+          "reason": "超出 1 天时效",
+          "recommended": false,
+          "pareto": false
+        },
+        {
+          "source_row": 700,
+          "carrier": "V444_4",
+          "service": "DTD",
+          "mode": "AIR",
+          "days": 2,
+          "weight_min": "75.01",
+          "weight_max": "99999.99",
+          "minimum_cost": "11.2216",
+          "unit_rate": "0.096",
+          "weight_cost": "76.800",
+          "raw_cost": "76.800",
+          "cost": "76.80",
+          "eligible": false,
+          "minimum_applied": false,
+          "formula": "max(11.2216, 800 × 0.096) = 76.80",
+          "reason": "超出 1 天时效",
+          "recommended": false,
+          "pareto": false
+        },
+        {
+          "source_row": 965,
+          "carrier": "V444_5",
+          "service": "DTD",
+          "mode": "AIR",
+          "days": 1,
+          "weight_min": "500",
+          "weight_max": "1999.99",
+          "minimum_cost": "25.4672",
+          "unit_rate": "0.2884",
+          "weight_cost": "230.7200",
+          "raw_cost": "230.7200",
+          "cost": "230.72",
+          "eligible": true,
+          "minimum_applied": false,
+          "formula": "max(25.4672, 800 × 0.2884) = 230.72",
+          "reason": "符合要求",
+          "recommended": true,
+          "pareto": true
+        }
+      ],
+      "matched": 5,
+      "eligible": 1,
+      "recommendation": {
+        "source_row": 965,
+        "carrier": "V444_5",
+        "service": "DTD",
+        "mode": "AIR",
+        "days": 1,
+        "weight_min": "500",
+        "weight_max": "1999.99",
+        "minimum_cost": "25.4672",
+        "unit_rate": "0.2884",
+        "weight_cost": "230.7200",
+        "raw_cost": "230.7200",
+        "cost": "230.72",
+        "eligible": true,
+        "minimum_applied": false,
+        "formula": "max(25.4672, 800 × 0.2884) = 230.72",
+        "reason": "符合要求",
+        "recommended": true,
+        "pareto": true
+      },
+      "fastest_baseline": {
+        "source_row": 965,
+        "carrier": "V444_5",
+        "service": "DTD",
+        "mode": "AIR",
+        "days": 1,
+        "weight_min": "500",
+        "weight_max": "1999.99",
+        "minimum_cost": "25.4672",
+        "unit_rate": "0.2884",
+        "weight_cost": "230.7200",
+        "raw_cost": "230.7200",
+        "cost": "230.72",
+        "eligible": true,
+        "minimum_applied": false,
+        "formula": "max(25.4672, 800 × 0.2884) = 230.72",
+        "reason": "符合要求",
+        "recommended": true,
+        "pareto": true
+      },
+      "savings_vs_fastest": "0.00",
+      "savings_percent": 0,
+      "exclusions": {
+        "route": 1058,
+        "weight": 471,
+        "service": 3,
+        "mode": 0,
+        "time": 4
+      },
+      "catalog": {
+        "id": "442be43a7393fc67",
+        "name": "FreightRates.csv",
+        "sha256": "442be43a7393fc6793a0d8748ed280a42be2235dc64e2fafd27a9ba5678362f5",
+        "total": 1540,
+        "valid": 1537,
+        "rejected": [],
+        "duplicates": 3,
+        "carriers": 9,
+        "origins": [
+          "PORT02",
+          "PORT03",
+          "PORT04",
+          "PORT05",
+          "PORT06",
+          "PORT07",
+          "PORT08",
+          "PORT09",
+          "PORT10",
+          "PORT11"
+        ],
+        "destinations": [
+          "PORT09"
+        ],
+        "routes": 10
+      },
+      "billing": {
+        "formula": "max(Min_Cost, 货物重量 × Rate)",
+        "weight_interval": "两端包含；重量最多两位小数",
+        "rounding": "Decimal 精确比较，显示金额四舍五入到两位小数",
+        "units": "重量单位与币种须由业务确认；展示为报价单位 / 货币单位",
+        "scope": "每单整体交给一个承运商；不包含燃油、税费、体积重、容量约束与跨单拼单"
+      },
+      "trace": [
+        {
+          "tool": "validate_order",
+          "status": "ok",
+          "detail": "PORT06 → PORT09 · 800 报价单位"
+        },
+        {
+          "tool": "match_rates",
+          "status": "ok",
+          "detail": "有效报价 1537 条，匹配 5 条"
+        },
+        {
+          "tool": "calculate_costs",
+          "status": "ok",
+          "detail": "按最低收费与重量计费较高者核算"
+        },
+        {
+          "tool": "apply_constraints",
+          "status": "ok",
+          "detail": "满足时效 1 条"
+        },
+        {
+          "tool": "recommend_plan",
+          "status": "ok",
+          "detail": "V444_5 · 230.72"
+        }
+      ],
+      "input_row": 3
+    },
+    {
+      "order": {
+        "id": "DEMO-003",
+        "weight": "800",
+        "origin": "PORT07",
+        "destination": "PORT09",
+        "max_days": 1,
+        "service": "DTD",
+        "mode": "AIR"
+      },
+      "status": "no_feasible_plan",
+      "message": "路线与重量匹配，但没有方案满足时效；请调整约束",
+      "candidates": [
+        {
+          "source_row": 78,
+          "carrier": "V444_2",
+          "service": "DTD",
+          "mode": "AIR",
+          "days": 6,
+          "weight_min": "500",
+          "weight_max": "1999.99",
+          "minimum_cost": "21.2272",
+          "unit_rate": "0.1924",
+          "weight_cost": "153.9200",
+          "raw_cost": "153.9200",
+          "cost": "153.92",
+          "eligible": false,
+          "minimum_applied": false,
+          "formula": "max(21.2272, 800 × 0.1924) = 153.92",
+          "reason": "超出 1 天时效",
+          "recommended": false,
+          "pareto": false
+        },
+        {
+          "source_row": 163,
+          "carrier": "V444_2",
+          "service": "DTD",
+          "mode": "AIR",
+          "days": 4,
+          "weight_min": "500",
+          "weight_max": "1999.99",
+          "minimum_cost": "21.6272",
+          "unit_rate": "0.1932",
+          "weight_cost": "154.5600",
+          "raw_cost": "154.5600",
+          "cost": "154.56",
+          "eligible": false,
+          "minimum_applied": false,
+          "formula": "max(21.6272, 800 × 0.1932) = 154.56",
+          "reason": "超出 1 天时效",
+          "recommended": false,
+          "pareto": false
+        },
+        {
+          "source_row": 185,
+          "carrier": "V444_2",
+          "service": "DTD",
+          "mode": "AIR",
+          "days": 3,
+          "weight_min": "500",
+          "weight_max": "1999.99",
+          "minimum_cost": "23.0272",
+          "unit_rate": "0.1972",
+          "weight_cost": "157.7600",
+          "raw_cost": "157.7600",
+          "cost": "157.76",
+          "eligible": false,
+          "minimum_applied": false,
+          "formula": "max(23.0272, 800 × 0.1972) = 157.76",
+          "reason": "超出 1 天时效",
+          "recommended": false,
+          "pareto": false
+        }
+      ],
+      "matched": 3,
+      "eligible": 0,
+      "recommendation": null,
+      "fastest_baseline": {
+        "source_row": 185,
+        "carrier": "V444_2",
+        "service": "DTD",
+        "mode": "AIR",
+        "days": 3,
+        "weight_min": "500",
+        "weight_max": "1999.99",
+        "minimum_cost": "23.0272",
+        "unit_rate": "0.1972",
+        "weight_cost": "157.7600",
+        "raw_cost": "157.7600",
+        "cost": "157.76",
+        "eligible": false,
+        "minimum_applied": false,
+        "formula": "max(23.0272, 800 × 0.1972) = 157.76",
+        "reason": "超出 1 天时效",
+        "recommended": false,
+        "pareto": false
+      },
+      "savings_vs_fastest": null,
+      "savings_percent": null,
+      "exclusions": {
+        "route": 1517,
+        "weight": 16,
+        "service": 1,
+        "mode": 0,
+        "time": 3
+      },
+      "catalog": {
+        "id": "442be43a7393fc67",
+        "name": "FreightRates.csv",
+        "sha256": "442be43a7393fc6793a0d8748ed280a42be2235dc64e2fafd27a9ba5678362f5",
+        "total": 1540,
+        "valid": 1537,
+        "rejected": [],
+        "duplicates": 3,
+        "carriers": 9,
+        "origins": [
+          "PORT02",
+          "PORT03",
+          "PORT04",
+          "PORT05",
+          "PORT06",
+          "PORT07",
+          "PORT08",
+          "PORT09",
+          "PORT10",
+          "PORT11"
+        ],
+        "destinations": [
+          "PORT09"
+        ],
+        "routes": 10
+      },
+      "billing": {
+        "formula": "max(Min_Cost, 货物重量 × Rate)",
+        "weight_interval": "两端包含；重量最多两位小数",
+        "rounding": "Decimal 精确比较，显示金额四舍五入到两位小数",
+        "units": "重量单位与币种须由业务确认；展示为报价单位 / 货币单位",
+        "scope": "每单整体交给一个承运商；不包含燃油、税费、体积重、容量约束与跨单拼单"
+      },
+      "trace": [
+        {
+          "tool": "validate_order",
+          "status": "ok",
+          "detail": "PORT07 → PORT09 · 800 报价单位"
+        },
+        {
+          "tool": "match_rates",
+          "status": "ok",
+          "detail": "有效报价 1537 条，匹配 3 条"
+        },
+        {
+          "tool": "calculate_costs",
+          "status": "ok",
+          "detail": "按最低收费与重量计费较高者核算"
+        },
+        {
+          "tool": "apply_constraints",
+          "status": "ok",
+          "detail": "满足时效 0 条"
+        },
+        {
+          "tool": "recommend_plan",
+          "status": "no_result",
+          "detail": "路线与重量匹配，但没有方案满足时效；请调整约束"
+        }
+      ],
+      "input_row": 4
+    },
+    {
+      "input_row": 5,
+      "order": {
+        "id": "DEMO-004"
+      },
+      "status": "invalid",
+      "message": "货物重量须为 0.01 到 1,000,000,000 之间的有限数值",
+      "recommendation": null
+    },
+    {
+      "order": {
+        "id": "DEMO-005",
+        "weight": "50",
+        "origin": "PORT08",
+        "destination": "PORT09",
+        "max_days": 3,
+        "service": "DTD",
+        "mode": "AIR"
+      },
+      "status": "ok",
+      "message": "已推荐满足约束的最低成本方案",
+      "candidates": [
+        {
+          "source_row": 121,
+          "carrier": "V444_2",
+          "service": "DTD",
+          "mode": "AIR",
+          "days": 5,
+          "weight_min": "0",
+          "weight_max": "99.99",
+          "minimum_cost": "19.0272",
+          "unit_rate": "0.2252",
+          "weight_cost": "11.2600",
+          "raw_cost": "19.0272",
+          "cost": "19.03",
+          "eligible": false,
+          "minimum_applied": true,
+          "formula": "max(19.0272, 50 × 0.2252) = 19.03",
+          "reason": "超出 3 天时效",
+          "recommended": false,
+          "pareto": false
+        },
+        {
+          "source_row": 83,
+          "carrier": "V444_2",
+          "service": "DTD",
+          "mode": "AIR",
+          "days": 6,
+          "weight_min": "0",
+          "weight_max": "99.99",
+          "minimum_cost": "21.0272",
+          "unit_rate": "0.2172",
+          "weight_cost": "10.8600",
+          "raw_cost": "21.0272",
+          "cost": "21.03",
+          "eligible": false,
+          "minimum_applied": true,
+          "formula": "max(21.0272, 50 × 0.2172) = 21.03",
+          "reason": "超出 3 天时效",
+          "recommended": false,
+          "pareto": false
+        },
+        {
+          "source_row": 5,
+          "carrier": "V444_6",
+          "service": "DTD",
+          "mode": "AIR",
+          "days": 2,
+          "weight_min": "50",
+          "weight_max": "54.99",
+          "minimum_cost": "43.2272",
+          "unit_rate": "0.8272",
+          "weight_cost": "41.3600",
+          "raw_cost": "43.2272",
+          "cost": "43.23",
+          "eligible": true,
+          "minimum_applied": true,
+          "formula": "max(43.2272, 50 × 0.8272) = 43.23",
+          "reason": "符合要求",
+          "recommended": true,
+          "pareto": true
+        },
+        {
+          "source_row": 57,
+          "carrier": "V444_9",
+          "service": "DTD",
+          "mode": "AIR",
+          "days": 14,
+          "weight_min": "0",
+          "weight_max": "499.99",
+          "minimum_cost": "231.3072",
+          "unit_rate": "0.188",
+          "weight_cost": "9.400",
+          "raw_cost": "231.3072",
+          "cost": "231.31",
+          "eligible": false,
+          "minimum_applied": true,
+          "formula": "max(231.3072, 50 × 0.188) = 231.31",
+          "reason": "超出 3 天时效",
+          "recommended": false,
+          "pareto": false
+        }
+      ],
+      "matched": 4,
+      "eligible": 1,
+      "recommendation": {
+        "source_row": 5,
+        "carrier": "V444_6",
+        "service": "DTD",
+        "mode": "AIR",
+        "days": 2,
+        "weight_min": "50",
+        "weight_max": "54.99",
+        "minimum_cost": "43.2272",
+        "unit_rate": "0.8272",
+        "weight_cost": "41.3600",
+        "raw_cost": "43.2272",
+        "cost": "43.23",
+        "eligible": true,
+        "minimum_applied": true,
+        "formula": "max(43.2272, 50 × 0.8272) = 43.23",
+        "reason": "符合要求",
+        "recommended": true,
+        "pareto": true
+      },
+      "fastest_baseline": {
+        "source_row": 5,
+        "carrier": "V444_6",
+        "service": "DTD",
+        "mode": "AIR",
+        "days": 2,
+        "weight_min": "50",
+        "weight_max": "54.99",
+        "minimum_cost": "43.2272",
+        "unit_rate": "0.8272",
+        "weight_cost": "41.3600",
+        "raw_cost": "43.2272",
+        "cost": "43.23",
+        "eligible": true,
+        "minimum_applied": true,
+        "formula": "max(43.2272, 50 × 0.8272) = 43.23",
+        "reason": "符合要求",
+        "recommended": true,
+        "pareto": true
+      },
+      "savings_vs_fastest": "0.00",
+      "savings_percent": 0,
+      "exclusions": {
+        "route": 1498,
+        "weight": 34,
+        "service": 1,
+        "mode": 0,
+        "time": 3
+      },
+      "catalog": {
+        "id": "442be43a7393fc67",
+        "name": "FreightRates.csv",
+        "sha256": "442be43a7393fc6793a0d8748ed280a42be2235dc64e2fafd27a9ba5678362f5",
+        "total": 1540,
+        "valid": 1537,
+        "rejected": [],
+        "duplicates": 3,
+        "carriers": 9,
+        "origins": [
+          "PORT02",
+          "PORT03",
+          "PORT04",
+          "PORT05",
+          "PORT06",
+          "PORT07",
+          "PORT08",
+          "PORT09",
+          "PORT10",
+          "PORT11"
+        ],
+        "destinations": [
+          "PORT09"
+        ],
+        "routes": 10
+      },
+      "billing": {
+        "formula": "max(Min_Cost, 货物重量 × Rate)",
+        "weight_interval": "两端包含；重量最多两位小数",
+        "rounding": "Decimal 精确比较，显示金额四舍五入到两位小数",
+        "units": "重量单位与币种须由业务确认；展示为报价单位 / 货币单位",
+        "scope": "每单整体交给一个承运商；不包含燃油、税费、体积重、容量约束与跨单拼单"
+      },
+      "trace": [
+        {
+          "tool": "validate_order",
+          "status": "ok",
+          "detail": "PORT08 → PORT09 · 50 报价单位"
+        },
+        {
+          "tool": "match_rates",
+          "status": "ok",
+          "detail": "有效报价 1537 条，匹配 4 条"
+        },
+        {
+          "tool": "calculate_costs",
+          "status": "ok",
+          "detail": "按最低收费与重量计费较高者核算"
+        },
+        {
+          "tool": "apply_constraints",
+          "status": "ok",
+          "detail": "满足时效 1 条"
+        },
+        {
+          "tool": "recommend_plan",
+          "status": "ok",
+          "detail": "V444_6 · 43.23"
+        }
+      ],
+      "input_row": 6
+    }
+  ],
+  "summary": {
+    "orders": 5,
+    "recommended": 3,
+    "no_feasible": 1,
+    "invalid": 1,
+    "total_cost": "341.79",
+    "note": "总费用仅汇总成功推荐的订单；未推荐订单未计入。逐单独立最优，不包含拼单或承运商容量优化。"
+  },
+  "catalog": {
+    "id": "442be43a7393fc67",
+    "name": "FreightRates.csv",
+    "sha256": "442be43a7393fc6793a0d8748ed280a42be2235dc64e2fafd27a9ba5678362f5",
+    "total": 1540,
+    "valid": 1537,
+    "rejected": [],
+    "duplicates": 3,
+    "carriers": 9,
+    "origins": [
+      "PORT02",
+      "PORT03",
+      "PORT04",
+      "PORT05",
+      "PORT06",
+      "PORT07",
+      "PORT08",
+      "PORT09",
+      "PORT10",
+      "PORT11"
+    ],
+    "destinations": [
+      "PORT09"
+    ],
+    "routes": 10
+  },
+  "result_id": "36ca2cdc94a8b6bc963d",
+  "generated_at": "2026-10-13T06:38:03.594127+00:00"
+}

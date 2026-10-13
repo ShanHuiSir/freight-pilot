@@ -1,0 +1,12 @@
+{
+  "text": "DeepSeek API · deepseek-flash · 0.65 秒 · 请核对字段后执行",
+  "order": {
+    "id": "DEMO-001",
+    "weight": "800",
+    "origin": "PORT06",
+    "destination": "PORT09",
+    "max_days": "3",
+    "service": "DTD",
+    "mode": "AIR"
+  }
+}

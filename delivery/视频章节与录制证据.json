@@ -1,0 +1,313 @@
+{
+  "method": "Chromium native browser recording of actual actions; visible pointer/click visualization and timed captions",
+  "duration_seconds": 225.66,
+  "resolution": [
+    1920,
+    1080
+  ],
+  "voice": "local Kokoro v1.1-zh ONNX / zf_001",
+  "real_page_errors": [],
+  "raw_video_sha256": "0e2a704f9279f22582e6a374b1f7923eecfe35a6c4bc153d8e71a8e578dc31fb",
+  "waiting": "真实等待保持；没有替换业务数值或预写结果；开头真实静止画面延长1.5秒以补齐原生录屏启动延迟",
+  "caption_pixel_calibration": {
+    "raw_duration": 224.24,
+    "caption_start_seconds": [
+      0.08,
+      4.04,
+      9.04,
+      18.0,
+      22.28,
+      30.92,
+      42.56,
+      48.6,
+      53.16,
+      57.8,
+      67.44,
+      75.32,
+      79.84,
+      89.08,
+      93.84,
+      103.0,
+      110.4,
+      120.64,
+      127.36,
+      136.52,
+      146.12,
+      152.6,
+      160.96,
+      171.84,
+      176.88,
+      182.52,
+      192.24,
+      198.6,
+      204.6,
+      209.96
+    ],
+    "caption_end_seconds": [
+      3.6,
+      8.72,
+      16.0,
+      21.84,
+      30.64,
+      40.32,
+      48.16,
+      52.84,
+      57.44,
+      65.48,
+      74.88,
+      79.52,
+      86.92,
+      93.4,
+      102.68,
+      109.96,
+      118.72,
+      126.96,
+      136.2,
+      144.04,
+      152.16,
+      160.64,
+      169.8,
+      176.44,
+      182.2,
+      190.2,
+      192.92,
+      204.24,
+      209.52,
+      220.88
+    ],
+    "clock_offset_seconds": 2.7479999999999976,
+    "offset_min": 2.6799999999999926,
+    "offset_max": 2.7720000000000056,
+    "stable_calibration_points": 27,
+    "excluded_visual_transitions": [
+      {
+        "caption_index": 0,
+        "offset": 1.438
+      },
+      {
+        "caption_index": 6,
+        "offset": 2.5379999999999967
+      },
+      {
+        "caption_index": 27,
+        "offset": 1.9690000000000225
+      }
+    ],
+    "excluded_reason": "启动时第一段已在显示，预览对话框背景遮罩影响一处字幕亮度检测；使用其余稳定起点拟合原生录屏时钟"
+  },
+  "chapters": [
+    {
+      "chapter": "业务问题",
+      "start_seconds": 0,
+      "end_seconds": 18.892,
+      "captions_absolute": [
+        {
+          "start_seconds": 0.19,
+          "end_seconds": 5.031,
+          "text": "一笔运输订单，报价最低的承运商，就一定最合适吗？"
+        },
+        {
+          "start_seconds": 5.451,
+          "end_seconds": 10.155,
+          "text": "还得看重量区间、服务等级，以及货物能不能按时到。"
+        },
+        {
+          "start_seconds": 10.475,
+          "end_seconds": 17.418,
+          "text": "这是运筹，运输方案比价与优化智能体。接下来，我们用模拟订单走一遍真实操作。"
+        }
+      ]
+    },
+    {
+      "chapter": "输入报价文件",
+      "start_seconds": 18.892,
+      "end_seconds": 43.219,
+      "captions_absolute": [
+        {
+          "start_seconds": 19.442,
+          "end_seconds": 23.28,
+          "text": "先导入比赛提供的承运商报价文件。"
+        },
+        {
+          "start_seconds": 23.7,
+          "end_seconds": 32.019,
+          "text": "原表有一千五百四十行，系统去掉了三条完全重复记录，留下了一千五百三十七条有效报价。"
+        },
+        {
+          "start_seconds": 32.339,
+          "end_seconds": 41.745,
+          "text": "这里包含九家承运商、十条路线。报价的重量单位和币种没有注明，所以界面不会擅自写成公斤或人民币。"
+        }
+      ]
+    },
+    {
+      "chapter": "描述运输需求",
+      "start_seconds": 43.22,
+      "end_seconds": 68.313,
+      "captions_absolute": [
+        {
+          "start_seconds": 43.77,
+          "end_seconds": 49.593,
+          "text": "这次要运八百个报价单位，从港口零六到港口零九，三天内到达。"
+        },
+        {
+          "start_seconds": 50.013,
+          "end_seconds": 54.265,
+          "text": "为了保持同口径比较，我只选 DTD 服务和 AIR 空运。"
+        },
+        {
+          "start_seconds": 54.585,
+          "end_seconds": 58.809,
+          "text": "点击解析需求，DeepSeek 会把这句话转成订单字段。"
+        },
+        {
+          "start_seconds": 59.229,
+          "end_seconds": 66.908,
+          "text": "看一下，重量、起运港、目的港和三天的时效要求，都已经填好了。核对后，再开始比价。"
+        }
+      ]
+    },
+    {
+      "chapter": "匹配、核算与推荐",
+      "start_seconds": 68.313,
+      "end_seconds": 89.882,
+      "captions_absolute": [
+        {
+          "start_seconds": 68.863,
+          "end_seconds": 76.321,
+          "text": "现在开始处理。系统先校验订单，再匹配路线和重量，核算费用，最后检查时效。"
+        },
+        {
+          "start_seconds": 76.741,
+          "end_seconds": 80.964,
+          "text": "这里匹配到了五个方案，全部满足三天要求。"
+        },
+        {
+          "start_seconds": 81.284,
+          "end_seconds": 88.362,
+          "text": "推荐的是三天方案，费用六十七点八四。这个金额是计算结果，不是模型猜出来的。"
+        }
+      ]
+    },
+    {
+      "chapter": "查看比价依据",
+      "start_seconds": 89.882,
+      "end_seconds": 121.508,
+      "captions_absolute": [
+        {
+          "start_seconds": 90.432,
+          "end_seconds": 94.836,
+          "text": "往下看，每个方案都有费用、天数和原表行号。"
+        },
+        {
+          "start_seconds": 95.256,
+          "end_seconds": 104.107,
+          "text": "费用取最低收费与重量乘费率的较高值。当前方案按重量计费，可以追溯到原表第一百七十六行。"
+        },
+        {
+          "start_seconds": 104.427,
+          "end_seconds": 111.4,
+          "text": "如果希望两天到货，还有六十八点八零的选择。最快的一天方案是二百三十点七二。"
+        },
+        {
+          "start_seconds": 111.82,
+          "end_seconds": 120.117,
+          "text": "两者相差一百六十二点八八，只是这些匹配报价之间的比较，不代表企业已经实现了这个降本。"
+        }
+      ]
+    },
+    {
+      "chapter": "调整时效要求",
+      "start_seconds": 121.509,
+      "end_seconds": 146.963,
+      "captions_absolute": [
+        {
+          "start_seconds": 122.059,
+          "end_seconds": 128.372,
+          "text": "假如业务突然改成一天内到货，我们直接修改最大运输天数，再算一次。"
+        },
+        {
+          "start_seconds": 128.792,
+          "end_seconds": 137.634,
+          "text": "推荐费用变成了二百三十点七二。原来的便宜方案虽然仍然匹配路线，但因为超时，已经不能推荐了。"
+        },
+        {
+          "start_seconds": 137.954,
+          "end_seconds": 145.474,
+          "text": "再试一个零天到货的要求。这里没有可行方案，系统会明确说明，而不是硬凑一个结果。"
+        }
+      ]
+    },
+    {
+      "chapter": "批量订单与异常",
+      "start_seconds": 146.964,
+      "end_seconds": 172.712,
+      "captions_absolute": [
+        {
+          "start_seconds": 147.514,
+          "end_seconds": 153.592,
+          "text": "订单多的时候，可以直接上传订单文件。这里用的是五笔模拟订单。"
+        },
+        {
+          "start_seconds": 154.012,
+          "end_seconds": 162.064,
+          "text": "执行后，三笔得到推荐，一笔没有满足时效的方案，还有一笔因为重量为零，被标成了输入无效。"
+        },
+        {
+          "start_seconds": 162.384,
+          "end_seconds": 171.225,
+          "text": "异常不会影响其他订单。成功推荐的订单总费用，是三百四十一点七九。未推荐的订单没有算进总额。"
+        }
+      ]
+    },
+    {
+      "chapter": "生成采购简报",
+      "start_seconds": 172.713,
+      "end_seconds": 193.119,
+      "captions_absolute": [
+        {
+          "start_seconds": 173.263,
+          "end_seconds": 177.869,
+          "text": "回到单笔订单，恢复三天要求，重新生成结果。"
+        },
+        {
+          "start_seconds": 178.289,
+          "end_seconds": 183.642,
+          "text": "再让 DeepSeek 写一段采购简报，把推荐、替代方案和限制讲清楚。"
+        },
+        {
+          "start_seconds": 183.962,
+          "end_seconds": 191.627,
+          "text": "这次调用是真实完成的。模型只负责辅助解释，最终费用和推荐，仍然以核算表为准。"
+        }
+      ]
+    },
+    {
+      "chapter": "导出成果",
+      "start_seconds": 193.119,
+      "end_seconds": 223.723,
+      "captions_absolute": [
+        {
+          "start_seconds": 193.669,
+          "end_seconds": 198.821,
+          "text": "确认结果以后，先预览标准化简报，再导出成果整包。"
+        },
+        {
+          "start_seconds": 199.241,
+          "end_seconds": 205.682,
+          "text": "整包里有 Excel 比价表、CSV 明细、网页简报、文字简报，以及可复核的运行快照。"
+        },
+        {
+          "start_seconds": 206.002,
+          "end_seconds": 210.949,
+          "text": "批量结果也能单独导出，包含推荐清单和逐单说明。"
+        },
+        {
+          "start_seconds": 211.369,
+          "end_seconds": 222.324,
+          "text": "这就是从输入、比价，到结果交付的完整流程。演示订单是模拟数据，已验证的能力和业务假设，都在提交说明里列清楚了。"
+        }
+      ]
+    }
+  ]
+}

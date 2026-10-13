@@ -26,6 +26,8 @@ python app.py
 5. 可选调用 DeepSeek 生成采购简报，导出 XLSX、CSV、HTML、Markdown 和 JSON 运行快照。
 6. 批量处理订单并隔离无效与无可行方案的行，生成推荐清单和逐单简报。
 
+![实际运行界面](delivery/实际比价结果.png)
+
 ## 示例结果
 
 同一模拟订单：重量 `800`，`PORT06 → PORT09`，`DTD`，`AIR`。

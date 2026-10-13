@@ -1,0 +1,123 @@
+{
+  "date": "2026-10-13",
+  "timezone": "Asia/Shanghai",
+  "project": "FreightPilot 1.0.0",
+  "source_code_commit": "d2c45e60c4f4aa5d31389e3c3728b92f2f44b01e",
+  "tests": {
+    "count": 33,
+    "result": "passed",
+    "coverage": "最低收费、重量区间边界、精确小数、未舍入排序、时效、0天、去重、异常隔离、未知路线、服务/方式筛选、CSV安全导出、XLSX值表、缺字段、模型网络失败等"
+  },
+  "gui": "Chromium 真实页面输入/点击/上传/滚动/预览/下载，pageerror为0",
+  "model_parse": {
+    "text": "DeepSeek API · deepseek-flash · 0.65 秒 · 请核对字段后执行",
+    "order": {
+      "id": "DEMO-001",
+      "weight": "800",
+      "origin": "PORT06",
+      "destination": "PORT09",
+      "max_days": "3",
+      "service": "DTD",
+      "mode": "AIR"
+    }
+  },
+  "single_export": {
+    "result_id": "5edafea185c399e65b4d",
+    "recommendation": {
+      "source_row": 176,
+      "carrier": "V444_5",
+      "service": "DTD",
+      "mode": "AIR",
+      "days": 3,
+      "weight_min": "500",
+      "weight_max": "1999.99",
+      "minimum_cost": "7.4272",
+      "unit_rate": "0.0848",
+      "weight_cost": "67.8400",
+      "raw_cost": "67.8400",
+      "cost": "67.84",
+      "eligible": true,
+      "minimum_applied": false,
+      "formula": "max(7.4272, 800 × 0.0848) = 67.84",
+      "reason": "符合要求",
+      "recommended": true,
+      "pareto": true
+    },
+    "ai_meta": {
+      "model": "deepseek-flash",
+      "usage": {
+        "prompt_tokens": 1415,
+        "completion_tokens": 205,
+        "total_tokens": 1620,
+        "prompt_tokens_details": {
+          "cached_tokens": 1280
+        },
+        "prompt_cache_hit_tokens": 1280,
+        "prompt_cache_miss_tokens": 135
+      },
+      "seconds": 1.44,
+      "request_id": "07f3accf-a02b-468f-aa8a-0d61144d2e70",
+      "source": "DeepSeek API"
+    },
+    "export_files": [
+      "运输方案简报.md",
+      "运输方案简报.html",
+      "比价明细.csv",
+      "运行快照.json",
+      "比价结果.xlsx"
+    ],
+    "snapshot_consistency": "核算表、JSON、HTML一致，Excel费用列为数值类型"
+  },
+  "urgent_order": {
+    "result_id": "4cc2b44bce13cafc9e46",
+    "cost": "230.72",
+    "days": 1,
+    "eligible": 1
+  },
+  "infeasible_order": {
+    "result_id": "429f6f8a487eba68d0c9",
+    "status": "no_feasible_plan",
+    "recommendation": null
+  },
+  "batch_export": {
+    "result_id": "36ca2cdc94a8b6bc963d",
+    "summary": {
+      "orders": 5,
+      "recommended": 3,
+      "no_feasible": 1,
+      "invalid": 1,
+      "total_cost": "341.79",
+      "note": "总费用仅汇总成功推荐的订单；未推荐订单未计入。逐单独立最优，不包含拼单或承运商容量优化。"
+    },
+    "export_files": [
+      "批量推荐清单.csv",
+      "批量简报.md",
+      "逐单简报/001.md",
+      "逐单简报/002.md",
+      "逐单简报/003.md",
+      "逐单简报/005.md",
+      "运行快照.json",
+      "比价结果.xlsx"
+    ]
+  },
+  "executables": {
+    "macOS_arm64": {
+      "status": "passed",
+      "verification": "本机独立启动可执行程序，核算67.84并验证ZIP/XLSX导出",
+      "sha256": "92d8e59d6854ee11f8082d6e5e0f54c8c4fb4fe93f8d0e26df4cca613fecf259"
+    },
+    "Windows_x64": {
+      "status": "passed",
+      "workflow_run": "https://github.com/ShanHuiSir/freight-pilot/actions/runs/38357434988",
+      "verification": "Windows runner实际启动 exe，核算67.84，检查导出中包含XLSX",
+      "sha256": "6b14e1d350768043b4955f10e359402bef7e4bb9dcac9f04f05282827fdaa5cb"
+    }
+  },
+  "data": {
+    "sha256": "442be43a7393fc6793a0d8748ed280a42be2235dc64e2fafd27a9ba5678362f5",
+    "raw_rows": 1540,
+    "valid_after_dedup": 1537,
+    "duplicate_rows": 3
+  },
+  "truthfulness": "订单模拟；比赛样例报价未外部验证；币种与单位待业务确认；无实际企业降本声明"
+}

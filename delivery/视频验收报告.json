@@ -1,0 +1,22 @@
+{
+  "file": "运筹_演示视频_中文神经语音字幕版.mp4",
+  "sha256": "1b46085109ff86072d9b2e8bb08dcddb5562730281780aa8bba73730862c00e7",
+  "bytes": 24221420,
+  "duration_seconds": 225.66,
+  "tracks": "H.264 1920×1080 / AAC 48kHz mono / 内嵌中文字幕",
+  "neural_voice": "Kokoro v1.1-zh zf_001，本机 ONNX 神经推理，句间停顿与0.98/1.00/1.02轻微语速变化",
+  "subtitle_entries": 30,
+  "subtitle_sync": "检测实际录屏字幕的可见起点，用27个稳定可见起点校准原生录屏时钟；音轨、硬字幕及外置SRT均从同一音频分段生成",
+  "caption_clock_offset_seconds": 2.7479999999999976,
+  "caption_timing_jitter_seconds": 0.092,
+  "full_decode_check": "passed",
+  "page_errors": [],
+  "key_result_values": {
+    "three_days": "67.84",
+    "one_day": "230.72",
+    "zero_days": "无可行方案",
+    "batch_total": "341.79"
+  },
+  "stable_calibration_points": 27,
+  "subtitle_monotonicity_check": "passed"
+}
