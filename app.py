@@ -31,7 +31,7 @@ def remember(value):
     rid=hashlib.sha256(payload+secrets.token_bytes(8)).hexdigest()[:20]
     value['result_id']=rid;value['generated_at']=datetime.datetime.now(datetime.timezone.utc).isoformat()
     STATE.mkdir(parents=True,exist_ok=True)
-    tmp=STATE/(rid+'.tmp');tmp.write_text(json.dumps(value,ensure_ascii=False,indent=2));tmp.replace(STATE/(rid+'.json'))
+    tmp=STATE/(rid+'.tmp');tmp.write_text(json.dumps(value,ensure_ascii=False,indent=2),encoding='utf-8');tmp.replace(STATE/(rid+'.json'))
     with LOCK:RESULTS[rid]=value
     return value
 
@@ -41,7 +41,7 @@ def stored(rid):
     if value is None:
         p=STATE/(rid+'.json')
         if not p.is_file():raise ValidationError('结果不存在')
-        value=json.loads(p.read_text())
+        value=json.loads(p.read_text(encoding='utf-8'))
     return value
 
 def file_bytes(body):
@@ -104,7 +104,7 @@ class Handler(BaseHTTPRequestHandler):
                 r=stored(body.get('result_id',''))
                 if 'results' in r:raise ValidationError('AI 简报当前支持单笔订单')
                 value=explain(r);r['ai_explanation']=value
-                (STATE/(r['result_id']+'.json')).write_text(json.dumps(r,ensure_ascii=False,indent=2))
+                (STATE/(r['result_id']+'.json')).write_text(json.dumps(r,ensure_ascii=False,indent=2),encoding='utf-8')
                 return self.send(value)
             self.send({'error':'接口不存在'},status=404)
         except (ValidationError,ValueError,TypeError) as e:self.send({'error':str(e)},status=400)

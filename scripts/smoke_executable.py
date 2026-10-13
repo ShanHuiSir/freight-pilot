@@ -23,4 +23,7 @@ with tempfile.TemporaryDirectory() as data:
             import io,zipfile
             with zipfile.ZipFile(io.BytesIO(r.read())) as z:assert '比价结果.xlsx' in z.namelist()
         print('Packaged executable verified: health, quote=67.84, XLSX export')
+    except urllib.error.HTTPError as error:
+        print('HTTP response:',error.read().decode('utf-8',errors='replace'))
+        raise
     finally:proc.terminate();proc.wait(timeout=10)
