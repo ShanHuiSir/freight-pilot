@@ -10,7 +10,11 @@ with tempfile.TemporaryDirectory() as data:
             try:
                 with urllib.request.urlopen(f'http://127.0.0.1:{port}/api/health',timeout=1) as r:h=json.load(r)
                 break
-            except Exception:time.sleep(.5)
+            except Exception:
+                if proc.poll() is not None:
+                    output=proc.stdout.read().decode('utf-8',errors='replace')
+                    raise RuntimeError('packaged process exited: '+output)
+                time.sleep(.5)
         else:raise RuntimeError('packaged service did not start')
         req=urllib.request.Request(f'http://127.0.0.1:{port}/api/compare',data=json.dumps({'order':{'weight':800,'origin':'PORT06','destination':'PORT09','max_days':3,'service':'DTD'}}).encode(),headers={'Content-Type':'application/json','X-Freight-Token':h['token']})
         with urllib.request.urlopen(req,timeout=10) as r:result=json.load(r)

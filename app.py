@@ -115,6 +115,8 @@ class Handler(BaseHTTPRequestHandler):
 
 def main():
     global DEFAULT
+    if sys.stdout and hasattr(sys.stdout,'reconfigure'):sys.stdout.reconfigure(encoding='utf-8',errors='replace')
+    if sys.stderr and hasattr(sys.stderr,'reconfigure'):sys.stderr.reconfigure(encoding='utf-8',errors='replace')
     load_env();parser=argparse.ArgumentParser();parser.add_argument('--port',type=int,default=int(os.environ.get('FREIGHT_PORT','8899')));parser.add_argument('--no-browser',action='store_true');args=parser.parse_args()
     c=Catalog.load((BASE/'samples/FreightRates.csv').read_bytes(),'FreightRates.csv');DEFAULT=c.id;CATALOGS[c.id]=c
     try:server=ThreadingHTTPServer(('127.0.0.1',args.port),Handler)
